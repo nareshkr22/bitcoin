@@ -1,32 +1,30 @@
 <?php
-session_start();
+require_once 'includes/db_config.php';
 
 if(!isset($_SESSION['active']))
 {
-
  	$_SESSION['error']="Please Login";
     header("Location: login.php");
 }
-
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 	<?php $title="Admin Panel";
-	   include 'head.php';
+	   include 'template/head.php';
 	    ?>
 
 	<body class="no-skin">
 		
-		<?php include 'nav.php'; ?>
+		<?php include 'template/nav.php'; ?>
 		<!-- /section:basics/navbar.layout -->
 		<div class="main-container" id="main-container">
 			
 
 			<!-- #section:basics/sidebar -->
 			
-		<?php include 'sidebar.php'; ?>	
+		<?php include 'template/sidebar.php'; ?>	
 
 			<!-- /section:basics/sidebar -->
 			<div class="main-content">

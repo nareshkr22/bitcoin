@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once 'includes/db_config.php';
 if(isset($_POST['submit']))
 {
 
@@ -20,7 +20,7 @@ if(isset($_POST['submit']))
 
     <?php 
       $title = "Login Page";
-      include 'head.php'; ?>
+      include 'template/head.php'; ?>
 
 	<body class="login-layout">
 		<div class="main-container">
@@ -105,7 +105,7 @@ if(isset($_POST['submit']))
 
 		<!-- basic scripts -->
 
-<?php include 'scrripts.php'; ?>
+<?php include 'template/scripts.php'; ?>
 
 	</body>
 </html>
